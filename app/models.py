@@ -26,10 +26,9 @@ def add_taxi(
         notes=notes,
     )
     taxi.save()
-    ret_taxi = taxi
-    ret_taxi.taxi_number = ret_taxi.taxi_number + (taxi.id * 11)
-    ret_taxi.save()
-    return ret_taxi
+    taxi.taxi_number = taxi.taxi_number + (taxi.id * 11)
+    taxi.save()
+    return taxi
 
 
 def start_fare(num_pass):

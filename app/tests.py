@@ -115,6 +115,7 @@ class TestTaxi(TestCase):
             )
 
         taxi = models.start_fare(5)
+        self.assertEqual(taxi.id, 4)
         self.assertEqual(taxi.taxi_type, "Yukon")
         self.assertEqual(taxi.current_passengers, 5)
         self.assertEqual(taxi.taxi_number, 144)
